@@ -15,30 +15,30 @@
 
     <!-- Dependencies -->
     <dependencies>
-        <!-- JUnit 5 Dependencies -->
+        <!-- JUnit 5 API and Engine -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
-            <version>5.7.0</version> <!-- Update this to the latest version if necessary -->
+            <version>5.10.2</version>
             <scope>test</scope>
         </dependency>
 
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
-            <version>5.7.0</version> <!-- Update this to the latest version if necessary -->
+            <version>5.10.2</version>
             <scope>test</scope>
         </dependency>
 
-        <!-- JUnit Vintage (For JUnit 4 tests, if needed) -->
+        <!-- Include this only if using JUnit 4 tests -->
+        <!--
         <dependency>
             <groupId>org.junit.vintage</groupId>
             <artifactId>junit-vintage-engine</artifactId>
-            <version>5.7.0</version> <!-- Update this to the latest version if necessary -->
+            <version>5.10.2</version>
             <scope>test</scope>
         </dependency>
-
-        <!-- Additional dependencies can be added here -->
+        -->
     </dependencies>
 
     <!-- Build Configuration -->
@@ -48,13 +48,12 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>3.0.0-M5</version> <!-- Update the version to the latest version if needed -->
+                <version>3.2.2</version>
                 <configuration>
-                    <useModulePath>false</useModulePath> <!-- Necessary for JUnit 5 support -->
+                    <useModulePath>false</useModulePath>
                 </configuration>
             </plugin>
         </plugins>
     </build>
 
-    <!-- Additional configurations can be added here -->
 </project>
